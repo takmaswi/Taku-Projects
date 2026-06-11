@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #E0B33A; }
+  .stat { flex: 1; }
+  .stat .big { font-size: 20px; }
+  .logbtns { display: flex; gap: 8px; }
+  .logbtns .btn { flex: 1; padding: 11px 0; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>06:58</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Batch 14</h1><div class="sub">Broilers · started 19 Jan</div></div>
+        <span class="chip"><span class="dot"></span>Day 23 of 42</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card">
+        <div class="row" style="margin-bottom:8px"><span class="label">Grow out</span><span class="tiny">19 days to sale</span></div>
+        <div class="bar"><i style="width:55%"></i></div>
+      </div>
+      <div class="row" style="gap:10px">
+        <div class="card stat"><div class="label">Birds</div><div class="big" style="margin-top:4px">198</div><div class="tiny">7 lost · 3.4%</div></div>
+        <div class="card stat"><div class="label">Feed</div><div class="big" style="margin-top:4px">11 bags</div><div class="tiny">$209 so far</div></div>
+      </div>
+      <div class="card">
+        <div class="row" style="margin-bottom:6px"><span class="muted">Cost per bird so far</span><b>$1.43</b></div>
+        <div class="row" style="margin-bottom:6px"><span class="muted">Feed on hand</span><b>4 bags · 6 days</b></div>
+        <div class="row"><span class="muted">Vaccination</span><span class="chip good">Gumboro done</span></div>
+      </div>
+      <div class="card tint">
+        <div class="row">
+          <div><div class="label">If sold at $7 a bird</div><div class="big" style="margin-top:4px">$612 profit</div><div class="tiny">after feed, chicks and charcoal</div></div>
+          <span class="chip">Projection</span>
+        </div>
+      </div>
+      <div class="logbtns">
+        <button class="btn ghost">+ Feed</button>
+        <button class="btn ghost">+ Mortality</button>
+        <button class="btn">+ Sale</button>
+      </div>
+    </div>
+    <div class="tabbar"><span class="on">Batch</span><span>Costs</span><span>Sales</span><span>History</span></div>
+  </div></div>
+</div>
+</body>
+</html>

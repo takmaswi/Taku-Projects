@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #E8742C; }
+  .debtor { display: flex; align-items: center; gap: 12px; }
+  .ava { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 13px; background: color-mix(in srgb, var(--accent) 14%, #fff); color: color-mix(in srgb, var(--accent) 80%, #000); }
+  .debtor .who { flex: 1; }
+  .who b { display: block; font-size: 14.5px; }
+  .owe { text-align: right; }
+  .owe b { font-size: 15px; display: block; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>17:48</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Credit book</h1><div class="sub">Pamusha Tuckshop · 11 open accounts</div></div>
+        <span class="chip">$31.70 out</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card">
+        <div class="list">
+          <div class="debtor"><span class="ava">MR</span><span class="who"><b>Mai Rudo</b><span class="tiny">2 items · bread, sugar</span></span><span class="owe"><b>$4.50</b><span class="chip grey" style="margin-top:4px">due Friday</span></span></div>
+          <div class="divider"></div>
+          <div class="debtor"><span class="ava">BT</span><span class="who"><b>Baba Tafara</b><span class="tiny">airtime, mealie meal</span></span><span class="owe"><b>$12.00</b><span class="chip bad" style="margin-top:4px">2 weeks late</span></span></div>
+          <div class="divider"></div>
+          <div class="debtor"><span class="ava">GC</span><span class="who"><b>Gogo Chipo</b><span class="tiny">cooking oil</span></span><span class="owe"><b>$2.20</b><span class="chip warn" style="margin-top:4px">due today</span></span></div>
+        </div>
+      </div>
+      <button class="btn">Send WhatsApp reminder</button>
+      <div class="tiny" style="text-align:center">Polite message, your shop name signed</div>
+      <div class="card tint">
+        <div class="label" style="margin-bottom:10px">Today at a glance</div>
+        <div class="row" style="margin-bottom:6px"><span class="muted">Sales</span><b>$86.40</b></div>
+        <div class="row" style="margin-bottom:6px"><span class="muted">New credit given</span><b>$6.70</b></div>
+        <div class="row"><span class="muted">Cash in drawer</span><b>$54.00</b></div>
+      </div>
+    </div>
+    <div class="tabbar"><span class="on">Book</span><span>Stock</span><span>Cash</span><span>Settings</span></div>
+  </div></div>
+</div>
+</body>
+</html>

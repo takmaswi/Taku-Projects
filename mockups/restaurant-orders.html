@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #E84C30; }
+  .tabs { display: flex; gap: 16px; padding: 0 6px; }
+  .tabs span { font-size: 13.5px; font-weight: 600; color: var(--ink-2); padding-bottom: 8px; }
+  .tabs span.on { color: var(--accent); border-bottom: 2.5px solid var(--accent); }
+  .order-num { font-weight: 800; font-size: 15px; }
+  .items { font-size: 14px; line-height: 1.5; margin: 8px 0; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>12:05</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Kitchen queue</h1><div class="sub">Gava's Takeaway · lunch rush</div></div>
+        <span class="chip"><span class="dot"></span>3 cooking</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="tabs"><span class="on">Queue (3)</span><span>Ready (1)</span><span>Done (24)</span></div>
+      <div class="card tint">
+        <div class="row"><span class="order-num">#042</span><span class="chip grey">4 min</span></div>
+        <div class="items">2 x Sadza and beef stew<br>1 x Coleslaw side</div>
+        <div class="row"><span class="chip good">EcoCash paid</span><span class="tiny">via WhatsApp</span></div>
+      </div>
+      <div class="card">
+        <div class="row"><span class="order-num">#043</span><span class="chip grey">7 min</span></div>
+        <div class="items">1 x Quarter chicken and chips</div>
+        <div class="row"><span class="chip warn">Pay on collection</span><span class="tiny">walk in</span></div>
+      </div>
+      <div class="card">
+        <div class="row"><span class="order-num">#044</span><span class="chip grey">just in</span></div>
+        <div class="items">3 x Beef burger<br>2 x Fanta orange 500ml</div>
+        <div class="row"><span class="chip warn">EcoCash pending</span><span class="tiny">delivery · Kuwadzana</span></div>
+      </div>
+      <button class="btn">Mark #042 ready</button>
+    </div>
+    <div class="tabbar"><span class="on">Orders</span><span>Menu</span><span>Delivery</span><span>Takings</span></div>
+  </div></div>
+</div>
+</body>
+</html>

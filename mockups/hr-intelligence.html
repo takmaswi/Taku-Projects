@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #6B7280; }
+  .shell { flex: 1; display: flex; flex-direction: column; }
+  .topbar2 { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; border-bottom: 1px solid #eeede9; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; }
+  .brand i { width: 26px; height: 26px; border-radius: 7px; background: var(--ink); color: #fff; display: grid; place-items: center; font-style: normal; font-size: 11px; }
+  .content { padding: 20px 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .stat4 { display: flex; gap: 12px; }
+  .stat4 .card { flex: 1; }
+  .cols { display: flex; gap: 14px; flex: 1; }
+  .chart { display: flex; align-items: flex-end; gap: 26px; height: 150px; padding: 8px 10px 0; }
+  .chart .col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; justify-content: flex-end; }
+  .chart .col i { width: 100%; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, #79839a, #5c6373); display: block; }
+  .chart .col span { font-size: 11px; color: var(--ink-2); font-weight: 600; }
+  .risk { font-variant-numeric: tabular-nums; font-weight: 800; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="browser">
+    <div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><span class="urlbar">127.0.0.1:4173 · HR Intelligence</span><span style="width:56px"></span></div>
+    <div class="browser-body"><div class="shell">
+      <div class="topbar2">
+        <span class="brand"><i>HR</i>HR Intelligence · PMRC</span>
+        <span class="chip grey">Air gapped · binds to localhost only</span>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div><div class="big">Workforce overview</div><div class="muted">1,240 staff across 4 branches · data refreshed 06:00</div></div>
+          <button class="btn ghost">Export board pack</button>
+        </div>
+        <div class="stat4">
+          <div class="card"><div class="label">Headcount</div><div class="big" style="margin-top:4px">1,240</div><div class="tiny">+18 this quarter</div></div>
+          <div class="card"><div class="label">Attrition · 12m</div><div class="big" style="margin-top:4px">8.2%</div><div class="tiny">sector median 11%</div></div>
+          <div class="card tint"><div class="label">High flight risk</div><div class="big" style="margin-top:4px">37</div><div class="tiny">needs attention</div></div>
+          <div class="card"><div class="label">Replacement cost</div><div class="big" style="margin-top:4px">$410k</div><div class="tiny">if all 37 leave</div></div>
+        </div>
+        <div class="cols">
+          <div class="card" style="flex:1.1">
+            <div class="label" style="margin-bottom:6px">Attrition by branch · 12 months</div>
+            <div class="chart">
+              <div class="col"><i style="height:78%"></i><span>Harare</span></div>
+              <div class="col"><i style="height:52%"></i><span>Bulawayo</span></div>
+              <div class="col"><i style="height:34%"></i><span>Mutare</span></div>
+              <div class="col"><i style="height:24%"></i><span>Gweru</span></div>
+            </div>
+          </div>
+          <div class="card" style="flex:1;padding:0;overflow:hidden">
+            <table class="table">
+              <tr><th>Flight risk</th><th>Unit</th><th class="num">Score</th><th>Top driver</th></tr>
+              <tr class="hl"><td><b>Grade C2 cohort</b></td><td>Engineering · Harare</td><td class="num risk">0.83</td><td>Pay below grade band</td></tr>
+              <tr><td>Senior nurses</td><td>Clinics · Bulawayo</td><td class="num risk">0.71</td><td>Overtime load</td></tr>
+              <tr><td>Field techs</td><td>Operations · Mutare</td><td class="num risk">0.64</td><td>No promotion 3 yrs</td></tr>
+            </table>
+            <div class="tiny" style="padding:10px 14px">XGBoost model · SHAP drivers shown in plain words</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</div>
+</body>
+</html>

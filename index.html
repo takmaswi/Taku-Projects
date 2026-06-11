@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Takunda Maswi. Full-stack developer and AI agent builder in Harare. Nineteen projects on the inside of a sphere." />
+  <meta name="theme-color" content="#0B0B0D" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0d'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%239d8cff' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ededef'/%3E%3C/svg%3E" />
+  <title>Takunda Maswi · Work</title>
+</head>
+<body>
+  <div id="webgl"></div>
+
+  <header class="topbar" id="topbar">
+    <a class="topbar-name" href="#/" data-route="home">Takunda Maswi</a>
+    <nav class="topbar-nav" aria-label="Site">
+      <a href="#/projects" data-route="projects">All projects</a>
+    </nav>
+  </header>
+
+  <div class="hud" id="hud" aria-hidden="true">
+    <div class="hud-status" id="hud-status"></div>
+    <h2 class="hud-title" id="hud-title"></h2>
+    <p class="hud-pitch" id="hud-pitch"></p>
+  </div>
+
+  <div class="hint" id="hint" aria-hidden="true"><span>Drag to look around</span></div>
+
+  <div id="detail-root"></div>
+  <div id="grid-root"></div>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-name">Takunda Maswi</div>
+      <div class="preloader-track"><div class="preloader-bar" id="preloader-bar"></div></div>
+      <div class="preloader-meta">
+        <span id="preloader-pct">0</span>
+        <span class="preloader-load" id="preloader-load">loading</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"><span class="cursor-label">View</span></div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

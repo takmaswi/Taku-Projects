@@ -1,0 +1,99 @@
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.cursor-dot::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
+}
+
+.cursor-ring {
+  display: grid;
+  place-items: center;
+}
+
+.cursor-ring::before {
+  content: '';
+  grid-area: 1 / 1;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border-radius: 50%;
+  border: 1px solid rgba(237, 237, 239, 0.4);
+  transition: transform 0.45s var(--ease-out), border-color 0.3s var(--ease-out), background-color 0.3s var(--ease-out);
+}
+
+.cursor-label {
+  grid-area: 1 / 1;
+  margin: -17px 0 0 -17px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bg);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.25s var(--ease-out), transform 0.45s var(--ease-out);
+}
+
+/* over a card: ring swells into a filled badge with the View label */
+.cursor.is-hover .cursor-ring::before {
+  transform: scale(2.1);
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.cursor.is-hover .cursor-label {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cursor.is-hover .cursor-dot::after {
+  opacity: 0;
+}
+
+/* over DOM links: modest growth, stays an outline */
+.cursor.is-link .cursor-ring::before {
+  transform: scale(1.5);
+  border-color: var(--text);
+}
+
+.cursor.is-down .cursor-ring::before {
+  transform: scale(0.85);
+}
+
+.cursor.is-hover.is-down .cursor-ring::before {
+  transform: scale(1.85);
+}
+
+.cursor.is-hidden {
+  opacity: 0 !important;
+}

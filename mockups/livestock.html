@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #9A6B3F; }
+  .animal { display: flex; gap: 12px; align-items: center; }
+  .tag { width: 52px; height: 36px; border-radius: 8px; background: color-mix(in srgb, var(--accent) 14%, #fff); border: 1px solid color-mix(in srgb, var(--accent) 30%, #fff); display: grid; place-items: center; font-size: 10px; font-weight: 800; color: color-mix(in srgb, var(--accent) 80%, #000); letter-spacing: 0.03em; }
+  .animal .who { flex: 1; }
+  .who b { display: block; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>07:15</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Herd register</h1><div class="sub">Maswi homestead · 23 animals</div></div>
+        <span class="chip grey">Synced</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card tint">
+        <div class="row">
+          <div><b style="font-size:14.5px">Dipping due in 3 days</b><div class="tiny">Council dip tank · all 23 animals · $0.50 each</div></div>
+          <span class="chip warn">Plan</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="list">
+          <div class="animal"><span class="tag">ZW-0247</span><span class="who"><b>Brahman cow · 4 yrs</b><span class="tiny">Calved 12 Mar · healthy · vacc up to date</span></span><span class="chip good">In herd</span></div>
+          <div class="divider"></div>
+          <div class="animal"><span class="tag">ZW-0251</span><span class="who"><b>Heifer · 2 yrs</b><span class="tiny">Pregnant · due May · sire ZW-0238</span></span><span class="chip">Breeding</span></div>
+          <div class="divider"></div>
+          <div class="animal"><span class="tag">ZW-0238</span><span class="who"><b>Bull · 5 yrs</b><span class="tiny">Sold 2 Feb · Mbare sale pen</span></span><span class="chip grey">Sold $510</span></div>
+          <div class="divider"></div>
+          <div class="animal"><span class="tag">ZW-0255</span><span class="who"><b>Tollie · 18 mo</b><span class="tiny">Weaned · graze paddock B</span></span><span class="chip good">In herd</span></div>
+        </div>
+      </div>
+      <div class="row" style="gap:8px">
+        <button class="btn" style="flex:1">Add animal</button>
+        <button class="btn ghost" style="flex:1">Record event</button>
+      </div>
+      <div class="tiny" style="text-align:center">Births, dips, sales: one record that does not get lost</div>
+    </div>
+    <div class="tabbar"><span class="on">Herd</span><span>Health</span><span>Breeding</span><span>Sales</span></div>
+  </div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #D4AF37; }
+  .member { display: flex; align-items: center; gap: 12px; }
+  .member b { flex: 1; font-size: 14.5px; }
+  .ring {
+    width: 86px; height: 86px; border-radius: 50%;
+    background: conic-gradient(var(--accent) 0 288deg, #efeee9 288deg 360deg);
+    display: grid; place-items: center;
+  }
+  .ring > div {
+    width: 64px; height: 64px; border-radius: 50%; background: #fff;
+    display: grid; place-items: center; text-align: center;
+    font-size: 11px; color: var(--ink-2); line-height: 1.25; font-weight: 600;
+  }
+  .ring b { font-size: 17px; color: var(--ink); display: block; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>19:21</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Mubatirapamwe</h1><div class="sub">Savings circle · 10 members</div></div>
+        <span class="chip">Round 7 of 12</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card tint">
+        <div class="row">
+          <div>
+            <div class="label">This round pays</div>
+            <div class="big" style="margin-top:4px">Chipo N.</div>
+            <div class="tiny">$240 on 28 February</div>
+          </div>
+          <div class="ring"><div><b>8/10</b>paid in</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="label" style="margin-bottom:10px">February contributions · $24 each</div>
+        <div class="list">
+          <div class="member"><b>Tariro</b><span class="chip good">Paid</span></div>
+          <div class="divider"></div>
+          <div class="member"><b>Chipo</b><span class="chip good">Paid</span></div>
+          <div class="divider"></div>
+          <div class="member"><b>Rumbi</b><span class="chip good">Paid · EcoCash</span></div>
+          <div class="divider"></div>
+          <div class="member"><b>Tendai</b><span class="chip warn">Pending</span></div>
+          <div class="divider"></div>
+          <div class="member"><b>Fadzai</b><span class="chip warn">Pending</span></div>
+        </div>
+      </div>
+      <button class="btn">Remind 2 members</button>
+      <div class="tiny" style="text-align:center">Ledger shared with all members, nothing hidden</div>
+    </div>
+    <div class="tabbar"><span class="on">Round</span><span>Ledger</span><span>Members</span><span>Rules</span></div>
+  </div></div>
+</div>
+</body>
+</html>

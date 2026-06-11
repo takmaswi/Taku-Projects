@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #6FA82C; }
+  .input-row { display: flex; align-items: center; gap: 10px; }
+  .input-row .what { flex: 1; }
+  .what b { display: block; font-size: 14px; }
+  .cost { font-weight: 700; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>16:40</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Maize · 4.5 ha</h1><div class="sub">Season 2025/26 · contract: GMB</div></div>
+        <span class="chip"><span class="dot"></span>Planted</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card">
+        <div class="label" style="margin-bottom:10px">Inputs this season</div>
+        <div class="list">
+          <div class="input-row"><span class="what"><b>Seed · SC 627</b><span class="tiny">25 kg, planted 24 Nov</span></span><span class="cost">$187</span></div>
+          <div class="divider"></div>
+          <div class="input-row"><span class="what"><b>Compound D</b><span class="tiny">8 bags, basal</span></span><span class="cost">$312</span></div>
+          <div class="divider"></div>
+          <div class="input-row"><span class="what"><b>Ammonium nitrate</b><span class="tiny">6 bags, top dress</span></span><span class="cost">$264</span></div>
+          <div class="divider"></div>
+          <div class="input-row"><span class="what"><b>Lambda cyhalothrin</b><span class="tiny">fall armyworm spray</span></span><span class="cost">$38</span></div>
+        </div>
+        <div class="divider" style="margin-top:10px"></div>
+        <div class="row" style="margin-top:8px"><span class="label">Total in</span><b style="font-size:16px">$801</b></div>
+      </div>
+      <div class="card tint">
+        <div class="row" style="margin-bottom:6px"><span class="muted">Yield target</span><b>5.2 t/ha</b></div>
+        <div class="row" style="margin-bottom:6px"><span class="muted">Contract price</span><b>$310 / tonne</b></div>
+        <div class="row"><span class="muted">Break even</span><b>2.6 tonnes</b></div>
+      </div>
+      <button class="btn">Add input</button>
+      <div class="tiny" style="text-align:center">Every receipt logged, paperwork ready at delivery</div>
+    </div>
+    <div class="tabbar"><span class="on">Season</span><span>Fields</span><span>Yield</span><span>Reports</span></div>
+  </div></div>
+</div>
+</body>
+</html>

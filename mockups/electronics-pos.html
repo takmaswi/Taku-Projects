@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #2D7FF9; }
+  .seg { display: flex; background: #f1f0ec; border-radius: 12px; padding: 4px; }
+  .seg span { flex: 1; text-align: center; font-size: 13px; font-weight: 600; padding: 9px 0; border-radius: 9px; color: var(--ink-2); }
+  .seg span.on { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(28,29,33,.12); }
+  .field { border: 1.4px solid #e2e0da; border-radius: 12px; padding: 10px 14px; }
+  .field .label { margin-bottom: 3px; }
+  .field b { font-size: 15px; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>14:27</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>New sale</h1><div class="sub">Receipt #1184 · Gen Hut Electronics</div></div>
+        <span class="chip grey">Till 1</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card">
+        <div class="row">
+          <div><b style="font-size:15px">Samsung Galaxy A16</b><div class="tiny">128 GB · Black · 1 unit</div></div>
+          <span class="big">$156</span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">IMEI captured</div>
+        <b>356789 10 422358 1</b>
+      </div>
+      <div class="row">
+        <span class="chip good">Warranty started · 12 months</span>
+        <span class="tiny">ends 14 Feb 2027</span>
+      </div>
+      <div>
+        <div class="label" style="margin-bottom:8px">Payment</div>
+        <div class="seg"><span>Cash</span><span>EcoCash</span><span class="on">Layby</span></div>
+      </div>
+      <div class="card tint">
+        <div class="row" style="margin-bottom:8px"><span class="muted">Deposit today</span><b>$50.00</b></div>
+        <div class="row" style="margin-bottom:8px"><span class="muted">3 instalments</span><b>$35.33 / month</b></div>
+        <div class="bar"><i style="width:32%"></i></div>
+        <div class="tiny" style="margin-top:6px">$50 of $156 paid</div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><b style="font-size:14px">Chargers, type C</b><div class="tiny">4 left</div></div>
+          <span class="chip warn">Low stock</span>
+        </div>
+      </div>
+      <button class="btn">Record sale</button>
+    </div>
+    <div class="tabbar"><span class="on">Sell</span><span>Stock</span><span>Layby</span><span>Warranty</span></div>
+  </div></div>
+</div>
+</body>
+</html>

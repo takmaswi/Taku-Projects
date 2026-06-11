@@ -1,0 +1,266 @@
+/* Shared mockup kit: light field, device frames, app UI primitives.
+   Each mockup sets --accent and composes these. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink: #1c1d21;
+  --ink-2: #5a5c66;
+  --ink-3: #a0a2ab;
+}
+
+html, body { width: 1600px; height: 1000px; }
+
+body {
+  font-family: 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.canvas {
+  width: 1600px;
+  height: 1000px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(1100px 700px at 50% 38%, color-mix(in srgb, var(--accent) 9%, #f2f1ed), #e9e8e4);
+}
+
+/* ---------- phone frame ---------- */
+.phone {
+  width: 402px;
+  height: 836px;
+  border-radius: 56px;
+  background: linear-gradient(180deg, #fdfdfc, #eceae6);
+  border: 1px solid #d8d6d0;
+  padding: 12px;
+  box-shadow:
+    0 40px 80px rgba(28, 29, 33, 0.18),
+    0 12px 28px rgba(28, 29, 33, 0.12);
+}
+
+.phone-screen {
+  height: 100%;
+  border-radius: 44px;
+  overflow: hidden;
+  background: #fbfbfa;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e3e1dc;
+}
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 26px 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.statusbar .pills { display: flex; gap: 5px; }
+.statusbar .pills i {
+  width: 14px; height: 9px; border-radius: 2px; background: var(--ink);
+  display: inline-block; opacity: 0.85;
+}
+.statusbar .pills i:nth-child(2) { opacity: 0.45; width: 10px; }
+
+.app-header {
+  padding: 14px 22px 12px;
+}
+
+.app-header h1 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.app-header .sub {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-top: 2px;
+}
+
+.app-body {
+  flex: 1;
+  padding: 4px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.tabbar {
+  display: flex;
+  border-top: 1px solid #ecebe7;
+  background: #fff;
+  padding: 10px 8px 18px;
+}
+
+.tabbar span {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #a7a6a0;
+}
+
+.tabbar span.on { color: var(--accent); }
+
+/* ---------- browser / desktop frame ---------- */
+.browser {
+  width: 1380px;
+  height: 880px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f4f3f0;
+  border: 1px solid #dcdad4;
+  box-shadow:
+    0 46px 90px rgba(28, 29, 33, 0.2),
+    0 14px 30px rgba(28, 29, 33, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-bar {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  border-bottom: 1px solid #e2e0da;
+}
+
+.lights { display: flex; gap: 8px; }
+.lights i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.lights i:nth-child(1) { background: #f26d5f; }
+.lights i:nth-child(2) { background: #f2bd4f; }
+.lights i:nth-child(3) { background: #5fc463; }
+
+.urlbar {
+  flex: 0 0 420px;
+  margin: 0 auto;
+  height: 28px;
+  border-radius: 8px;
+  background: #e9e7e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--ink-2);
+  gap: 6px;
+}
+
+.urlbar::before { content: ''; width: 9px; height: 9px; border: 1.4px solid #9b9992; border-radius: 50%; }
+
+.browser-body { flex: 1; background: #fff; display: flex; overflow: hidden; }
+
+/* ---------- ui primitives ---------- */
+.card {
+  background: #fff;
+  border: 1px solid #ecebe6;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 2px rgba(28, 29, 33, 0.04);
+}
+
+.card.tint {
+  background: color-mix(in srgb, var(--accent) 7%, #fff);
+  border-color: color-mix(in srgb, var(--accent) 22%, #fff);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.big { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 12%, #fff);
+  color: color-mix(in srgb, var(--accent) 78%, #000);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, #fff);
+  white-space: nowrap;
+}
+
+.chip.grey { background: #f1f0ec; color: var(--ink-2); border-color: #e3e1db; }
+.chip.good { background: #e8f6ee; color: #176e43; border-color: #c4e8d3; }
+.chip.warn { background: #fdf1e3; color: #9a5b13; border-color: #f4ddbb; }
+.chip.bad { background: #fdebe9; color: #a3322a; border-color: #f5cfca; }
+
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: inline-block; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+}
+
+.btn.ghost {
+  background: color-mix(in srgb, var(--accent) 10%, #fff);
+  color: color-mix(in srgb, var(--accent) 80%, #000);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, #fff);
+}
+
+.bar {
+  height: 8px;
+  border-radius: 99px;
+  background: #eeede9;
+  overflow: hidden;
+}
+
+.bar > i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--accent);
+}
+
+.list { display: flex; flex-direction: column; gap: 8px; }
+
+.muted { color: var(--ink-2); font-size: 13px; }
+.tiny { font-size: 11px; color: var(--ink-2); }
+
+.divider { height: 1px; background: #efeee9; margin: 4px 0; }
+
+/* simple table for desktop apps */
+.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.table th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+  padding: 10px 14px;
+  border-bottom: 1px solid #ecebe6;
+}
+.table td { padding: 11px 14px; border-bottom: 1px solid #f3f2ee; }
+.table tr.hl td { background: color-mix(in srgb, var(--accent) 6%, #fff); }
+.num { font-variant-numeric: tabular-nums; text-align: right; }

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #C2466B; }
+  .appt { display: flex; gap: 12px; align-items: center; }
+  .time { font-size: 13px; font-weight: 700; width: 48px; font-variant-numeric: tabular-nums; }
+  .appt .who { flex: 1; }
+  .who b { font-size: 14.5px; display: block; }
+  .who span { font-size: 12px; color: var(--ink-2); }
+  .price { font-weight: 700; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>09:12</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Shumba Cuts</h1><div class="sub">Saturday 14 Feb · 8 bookings</div></div>
+        <span class="chip"><span class="dot"></span>Open</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="card">
+        <div class="label" style="margin-bottom:10px">Today's diary</div>
+        <div class="list">
+          <div class="appt"><span class="time">08:30</span><span class="who"><b>Rutendo M.</b><span>Box braids · Mavis</span></span><span class="price">$25</span></div>
+          <div class="divider"></div>
+          <div class="appt"><span class="time">10:00</span><span class="who"><b>Tinashe G.</b><span>Fade and beard · Tonde</span></span><span class="price">$7</span></div>
+          <div class="divider"></div>
+          <div class="appt"><span class="time">11:30</span><span class="who"><b>Mrs Hove</b><span>Relaxer retouch · Mavis</span></span><span class="price">$12</span></div>
+          <div class="divider"></div>
+          <div class="appt"><span class="time">13:00</span><span class="who"><b>Kuda</b><span>Cornrows · Chenai</span></span><span class="price">$10</span></div>
+        </div>
+      </div>
+      <div class="card tint">
+        <div class="row">
+          <div><div class="label">Mavis · commission</div><div class="big" style="margin-top:4px">$22.20</div><div class="tiny">60% of $37 taken today</div></div>
+          <span class="chip">Auto split</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><b style="font-size:14px">ORS Relaxer 1kg</b><div class="tiny">2 left in stock</div></div>
+          <span class="chip warn">Reorder</span>
+        </div>
+      </div>
+      <div class="row" style="gap:8px">
+        <button class="btn" style="flex:1">New booking</button>
+        <button class="btn ghost" style="flex:1">WhatsApp reminders</button>
+      </div>
+    </div>
+    <div class="tabbar"><span class="on">Diary</span><span>Stylists</span><span>Stock</span><span>Money</span></div>
+  </div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #1FA67A; }
+  .shell { flex: 1; display: flex; flex-direction: column; }
+  .topbar2 { display: flex; align-items: center; justify-content: space-between; padding: 18px 28px; border-bottom: 1px solid #eeede9; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 16px; }
+  .brand i { width: 26px; height: 26px; border-radius: 7px; background: var(--accent); display: grid; place-items: center; color: #fff; font-style: normal; font-size: 13px; }
+  .seg { display: flex; background: #f1f0ec; border-radius: 10px; padding: 3px; font-size: 12.5px; font-weight: 600; }
+  .seg span { padding: 6px 14px; border-radius: 8px; color: var(--ink-2); }
+  .seg span.on { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(28,29,33,.1); }
+  .content { padding: 22px 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .working {
+    background: color-mix(in srgb, var(--accent) 6%, #fff);
+    border: 1px solid color-mix(in srgb, var(--accent) 24%, #fff);
+    border-radius: 12px; padding: 14px 18px; font-size: 13px;
+  }
+  .working code { font-family: Consolas, monospace; font-size: 13px; background: #fff; border: 1px solid #e7e5df; border-radius: 6px; padding: 2px 7px; }
+  .stat3 { display: flex; gap: 12px; }
+  .stat3 .card { flex: 1; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="browser">
+    <div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><span class="urlbar">localhost:3000 · Taku Payroll</span><span style="width:56px"></span></div>
+    <div class="browser-body"><div class="shell">
+      <div class="topbar2">
+        <span class="brand"><i>TP</i>Taku Payroll</span>
+        <div class="seg"><span class="on">USD stream</span><span>ZWG stream</span></div>
+        <span class="chip good">ZIMRA tables · Jan 2026</span>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div><div class="big">February 2026 run</div><div class="muted">14 employees · pay date 27 Feb · data stays on this machine</div></div>
+          <button class="btn">Approve run</button>
+        </div>
+        <div class="stat3">
+          <div class="card"><div class="label">Gross · USD</div><div class="big" style="margin-top:4px">$9,840</div></div>
+          <div class="card"><div class="label">PAYE due</div><div class="big" style="margin-top:4px">$1,184.20</div></div>
+          <div class="card"><div class="label">NSSA + levies</div><div class="big" style="margin-top:4px">$612.45</div></div>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <table class="table">
+            <tr><th>Employee</th><th class="num">Gross</th><th class="num">PAYE</th><th class="num">NSSA</th><th class="num">AIDS levy</th><th class="num">NEC</th><th class="num">Net</th><th></th></tr>
+            <tr><td>R. Mhofu</td><td class="num">$1,200.00</td><td class="num">$159.50</td><td class="num">$54.00</td><td class="num">$4.79</td><td class="num">$12.00</td><td class="num"><b>$969.71</b></td><td><span class="chip grey">working</span></td></tr>
+            <tr class="hl"><td><b>T. Chikwava</b></td><td class="num">$850.00</td><td class="num">$89.50</td><td class="num">$38.25</td><td class="num">$2.69</td><td class="num">$8.50</td><td class="num"><b>$711.06</b></td><td><span class="chip">working open</span></td></tr>
+            <tr><td>S. Gumbo</td><td class="num">$640.00</td><td class="num">$47.50</td><td class="num">$28.80</td><td class="num">$1.43</td><td class="num">$6.40</td><td class="num"><b>$555.87</b></td><td><span class="chip grey">working</span></td></tr>
+          </table>
+        </div>
+        <div class="working">
+          <b>Show working · T. Chikwava · PAYE, USD stream</b><br><br>
+          Taxable $850.00 falls in band $300.01 to $1,000.00 → <code>(850.00 × 20%) − $80.50 = $89.50</code><br>
+          AIDS levy → <code>3% × PAYE = $2.69</code> · NSSA 4.5% capped → <code>$38.25</code> · NEC commerce 1% → <code>$8.50</code>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</div>
+</body>
+</html>

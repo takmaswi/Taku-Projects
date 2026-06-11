@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #4B5170; }
+  .stat { flex: 1; }
+  .stat .big { font-size: 22px; }
+  .mrow { display: flex; align-items: center; gap: 10px; }
+  .mrow b { flex: 1; font-size: 14px; }
+  .mrow .plan { font-size: 12px; color: var(--ink-2); width: 56px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="phone"><div class="phone-screen">
+    <div class="statusbar"><span>10:34</span><span class="pills"><i></i><i></i></span></div>
+    <div class="app-header">
+      <div class="row">
+        <div><h1>Tariro Society</h1><div class="sub">Burial society · est. 1998</div></div>
+        <span class="chip grey">Treasurer</span>
+      </div>
+    </div>
+    <div class="app-body">
+      <div class="row" style="gap:10px">
+        <div class="card stat"><div class="label">Members</div><div class="big" style="margin-top:4px">64</div></div>
+        <div class="card stat"><div class="label">Paid · Feb</div><div class="big" style="margin-top:4px">58</div></div>
+        <div class="card stat"><div class="label">Fund</div><div class="big" style="margin-top:4px">$3.2k</div></div>
+      </div>
+      <div class="card tint">
+        <div class="row" style="margin-bottom:8px">
+          <b style="font-size:14.5px">Claim #12 · Moyo family</b>
+          <span class="chip good">Approved</span>
+        </div>
+        <div class="muted" style="font-size:13px">$400 payout · beneficiaries verified · paying Friday at the hall</div>
+      </div>
+      <div class="card">
+        <div class="label" style="margin-bottom:10px">Monthly dues · $5 family, $3 single</div>
+        <div class="list">
+          <div class="mrow"><b>J. Moyo</b><span class="plan">Family</span><span class="chip good">Paid</span></div>
+          <div class="divider"></div>
+          <div class="mrow"><b>S. Ncube</b><span class="plan">Single</span><span class="chip bad">Owing $3</span></div>
+          <div class="divider"></div>
+          <div class="mrow"><b>R. Dube</b><span class="plan">Family</span><span class="chip good">Paid</span></div>
+          <div class="divider"></div>
+          <div class="mrow"><b>P. Chirwa</b><span class="plan">Family</span><span class="chip warn">Due 28th</span></div>
+        </div>
+      </div>
+      <button class="btn ghost">Record a payment</button>
+    </div>
+    <div class="tabbar"><span class="on">Dues</span><span>Claims</span><span>Beneficiaries</span><span>Reports</span></div>
+  </div></div>
+</div>
+</body>
+</html>

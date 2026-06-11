@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kit.css">
+<style>
+  :root { --accent: #C9A24B; }
+  .dark {
+    flex: 1; position: relative; overflow: hidden;
+    background:
+      radial-gradient(700px 420px at 62% 46%, rgba(201, 162, 75, 0.16), transparent 70%),
+      radial-gradient(900px 600px at 30% 80%, rgba(60, 50, 30, 0.25), transparent 70%),
+      #101014;
+    color: #ecebe7;
+    display: flex; flex-direction: column;
+  }
+  .nav3d { display: flex; justify-content: space-between; align-items: center; padding: 22px 38px; font-size: 12px; letter-spacing: 0.18em; }
+  .nav3d b { font-weight: 800; letter-spacing: 0.22em; }
+  .nav3d span { color: rgba(236, 235, 231, 0.55); }
+  .stage3d { flex: 1; display: flex; align-items: center; justify-content: center; gap: 70px; padding: 0 60px 30px; }
+  .hut { position: relative; width: 270px; height: 270px; }
+  .hut .plinth {
+    position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+    width: 300px; height: 38px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(201, 162, 75, 0.25), transparent 75%);
+  }
+  .hut .wall {
+    position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+    width: 170px; height: 110px;
+    background: linear-gradient(100deg, #6e4f33 8%, #9c7449 45%, #5d4129 95%);
+    border-radius: 10px 10px 14px 14px;
+  }
+  .hut .wall::after {
+    content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0;
+    width: 44px; height: 64px; border-radius: 22px 22px 0 0; background: #2a2017;
+  }
+  .hut .band { position: absolute; bottom: 132px; left: 50%; transform: translateX(-50%); width: 178px; height: 12px; background: #3a2c1d; border-radius: 6px; }
+  .hut .roof {
+    position: absolute; bottom: 138px; left: 50%; transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 125px solid transparent; border-right: 125px solid transparent;
+    border-bottom: 120px solid #b69257;
+    filter: drop-shadow(0 -2px 0 rgba(0,0,0,0.2));
+  }
+  .hut .roof::after {
+    content: ''; position: absolute; left: -106px; top: 22px;
+    width: 0; height: 0;
+    border-left: 106px solid transparent; border-right: 106px solid transparent;
+    border-bottom: 96px solid rgba(64, 48, 28, 0.55);
+  }
+  .glass {
+    width: 330px; border-radius: 18px; padding: 26px 28px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 162, 75, 0.35);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  }
+  .glass h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.1; }
+  .glass h2 em { color: var(--accent); font-style: normal; }
+  .glass p { margin-top: 12px; font-size: 13.5px; line-height: 1.6; color: rgba(236, 235, 231, 0.66); }
+  .glass .meta { display: flex; gap: 8px; margin-top: 18px; }
+  .gchip { font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; padding: 5px 11px; border-radius: 99px; border: 1px solid rgba(201, 162, 75, 0.4); color: var(--accent); }
+  .dots3d { position: absolute; right: 30px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; }
+  .dots3d i { width: 6px; height: 6px; border-radius: 50%; background: rgba(236,235,231,0.25); }
+  .dots3d i.on { background: var(--accent); height: 18px; border-radius: 4px; }
+  .scroll3d { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-size: 10.5px; letter-spacing: 0.26em; color: rgba(236,235,231,0.4); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="browser">
+    <div class="browser-bar"><span class="lights"><i></i><i></i><i></i></span><span class="urlbar">takunda portfolio · hero, section 2 of 4</span><span style="width:56px"></span></div>
+    <div class="browser-body"><div class="dark">
+      <div class="nav3d"><b>TAKUNDA</b><span>WORK &nbsp;&middot;&nbsp; ABOUT &nbsp;&middot;&nbsp; CONTACT</span></div>
+      <div class="stage3d">
+        <div class="hut">
+          <span class="plinth"></span>
+          <span class="wall"></span>
+          <span class="band"></span>
+          <span class="roof"></span>
+        </div>
+        <div class="glass">
+          <h2>The homestead, <em>rendered</em>.</h2>
+          <p>A photoreal mud hut under studio HDRI light. It turns with you: four sections, one slow rotation, told by scroll.</p>
+          <div class="meta"><span class="gchip">THREE.JS</span><span class="gchip">GSAP SCROLL</span><span class="gchip">HDRI</span></div>
+        </div>
+      </div>
+      <div class="dots3d"><i></i><i class="on"></i><i></i><i></i></div>
+      <div class="scroll3d">SCROLL TO ROTATE</div>
+    </div></div>
+  </div>
+</div>
+</body>
+</html>
